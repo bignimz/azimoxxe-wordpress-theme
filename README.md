@@ -6,7 +6,7 @@ Azimoxxe is a single page WordPress theme custom developed using PHP 8, MySQL, a
 
 1. PHP 8
 2. MySQL Database
-3. WordPress Rest API
+3. WordPress settings API
 4. WordPress
 5. HTML5
 6. CSS3
