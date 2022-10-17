@@ -7,7 +7,8 @@
 */
 get_header();
 ?>
-    <main>Main content</main>
-    <h2><?php echo filemtime(get_template_directory() . '/style.css') ?></h2>
+    <div class="container">
+        <main class="py-3">Main content</main>
+    </div>
 <?php 
 get_footer(); 
