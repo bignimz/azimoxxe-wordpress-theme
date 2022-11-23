@@ -1,6 +1,6 @@
-# Azimoxxe WordPress Theme Development
+# Azimoxe WordPress Theme Development
 
-Azimoxxe is a single page WordPress theme custom developed using PHP 8, MySQL, and using WordPress Rest API, Custom Post Types and Advanced Custom Fields.
+Azimoxe is a single page WordPress theme custom developed using PHP 8, MySQL, and using WordPress Rest API, Custom Post Types and Advanced Custom Fields.
 
 ## Technologies Used
 
