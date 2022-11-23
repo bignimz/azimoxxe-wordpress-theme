@@ -34,4 +34,18 @@ register_nav_menus(
   array(
     "primary_menu" => "Primary Menu",
   )
-  );
+);
+
+// Setup Widget Areas
+function azimoxxe_widgets_init() {
+  register_sidebar([
+    'name'          => esc_html__('Main Sidebar', 'azimoxxe'),
+    'id'            => 'main-sidebar',
+    'description'   => esc_html__('Add widgets to the main sidebar', 'azimoxxe'),
+    'before_widget' => '<section class="widget">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h2 class="widget-title">',
+    'after_title' => '</h2>',
+  ]);
+}
+add_action ('widgets_init', 'azimoxxe_widgets_init');
