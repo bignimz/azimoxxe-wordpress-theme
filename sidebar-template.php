@@ -1,26 +1,25 @@
 <?php 
 
 /*
-* Main template.
+* Template Name: Page With Sidebar
 *
 * @package Azimoxe
 */
 
 get_header();
 ?>
-
-<img class="img-fluid" src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="">
+<?php get_template_part('template-parts/header/page-header'); ?>
     <div class="container">
-       <div class="py-5">
-            <main class="row mx-auto">
-                <h1 class="mb-4">Blog Posts</h1>
-                <hr>
+       <div class="row py-5">
+            <main class="col-md-8 col-sm-12 col-12 mx-auto">
                 <?php if(have_posts()) : while(have_posts()) : the_post(); ?> 
-                    <?php get_template_part('template-parts/main/content') ?>
+                    <?php the_title('<h2>', '</h2>') ?>
+                    <?php the_content(); ?>
                 <?php endwhile; else: ?>
                     <p class="notice"><?php esc_html_e("Sorry no posts found!", 'azimoxxe') ?></p>
                 <?php endif; ?>
             </main>
+            <?php get_sidebar('page'); ?>
        </div>
     </div>
 <?php 

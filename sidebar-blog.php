@@ -3,7 +3,7 @@
         return;
     }
 ?>
-<aside class="sidebar col-md-3 col-sm-12 col-12 mx-auto">
+<aside class="sidebar col-md-3 col-12 mx-auto">
     <div class="card shadow-sm p-5">
         <?php dynamic_sidebar('main-sidebar'); ?>
     </div>

@@ -3,7 +3,7 @@
 /*
 * Header template.
 *
-* @package azimoxxe
+* @package azimoxe
 */
 ?>
 
@@ -23,5 +23,5 @@
     }
     ?>
     <header class="header-nav">
-        <?php get_template_part('assets/template-parts/header/nav'); ?>
+        <?php get_template_part('template-parts/header/nav'); ?>
     </header>

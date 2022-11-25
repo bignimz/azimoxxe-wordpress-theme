@@ -1,0 +1,1 @@
+<p class="notice"><?php esc_html_e("Sorry no posts found!", 'azimoxxe') ?></p>

@@ -1,5 +1,10 @@
+a {
+  text-decoration: none;
+  color: #333;
+}
+
 .header-nav {
-  background-color: teal;
+  background-color: darkred;
   color: #fff;
 }
 
@@ -14,6 +19,7 @@
 
 .nav-menu ul li {
   display: inline;
+  text-transform: uppercase;
 }
 
 .nav-menu ul li a {
@@ -22,19 +28,74 @@
   margin-right: 30px;
 }
 
+.menu-item {
+  display: inline;
+  margin-right: 15px;
+}
+
+.menu-item a {
+  color: #fff;
+}
+
+.current-menu-item {
+  text-decoration: line-through;
+}
+
 article {
-  min-height: 70vh;
+  min-height: 50vh;
+}
+
+article p {
+  font-size: 16px;
 }
 
 .hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateX(-100%);
   transition: all 1s ease-in;
 }
 
 .show {
   opacity: 1;
   filter: blur(0);
+}
+
+.hidden2 {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s ease-in;
+}
+
+.show2 {
+  opacity: 1;
+  filter: blur(0);
   transform: translateX(0);
+}
+
+.page-header {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(1, 1, 1, 0.4)
+    ),
+    url(../images/sunset.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.features-section {
+  background-color: #e6e6e6;
+}
+
+.features-section i {
+  font-size: 100px;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  border-top: 10px solid darkred;
 }
