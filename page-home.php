@@ -9,46 +9,45 @@
 get_header();
 ?>
 
-<main>
-    <div class="container">
-        <div class="row align-items-center g-lg-5 py-5">
-            <div class="hidden2 col-lg-7 text-center text-lg-start">
-                <h1 class="display-4 fw-bold lh-1 mb-3">Creative Digital Agency</h1>
-                <p class="col-lg-10 fs-4">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
-            </div>
-            <div class="hidden col-md-10 mx-auto col-lg-5">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/main.png" alt="" class="img-fluid">
-            </div>
-        </div>
-
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?> 
-            <?php the_content(); ?>
-        <?php endwhile; else: ?>
-            <p class="notice"><?php esc_html_e("Sorry no posts found!", 'azimoxxe') ?></p>
-        <?php endif; ?>
-
-    </div>
-    <section class="features-section hidden py-5">
+<main <?php body_class(); ?>>
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-money" aria-hidden="true"></i>
-                    <h2 class="fw-normal">Affordable</h2>
-                    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-                </div><!-- /.col-lg-4 -->
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-edit" aria-hidden="true"></i>
-                    <h2 class="fw-normal">Heading</h2>
-                    <p>And lastly this, the third column of representative placeholder content.</p>
-                </div><!-- /.col-lg-4 -->
+            <div class="row align-items-center g-lg-5 py-5">
+                <div class="hidden2 col-lg-6 text-center text-lg-start">
+                    <h3 class="sub-title-color">Welcome</h3>
+                    <h1 class="hero-title lh-1 mb-5">Azimoxe Creative</h1>
+                    <p class="col-lg-10">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+                    <a href="<?php bloginfo('home_url'); ?>/about" class="btn btn-warning mt-4">Read More</a>
+                </div>
+                <div class="hidden col-md-10 mx-auto col-lg-6 hero-img">
+                    <img src="<?php bloginfo('template_url'); ?>/assets/images/hero-main.png" alt="" class="img-fluid">
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Intro Section -->
+    <?php get_template_part('template-parts/main/intro') ?>
+
+    <!-- Services section -->
+    <section class="services">
+        <div class="container">
+            <div class="row align-items-center">
+                <?php get_template_part('template-parts/main/services') ?>
+                <div class="col-md-6 col-12 mx-auto hidden1">
+                    <p class="sub-title text-center">Services we provide</p>
+                    <h3 class="intro-title text-center mb-5">Building & Maintaining Web Applications</h3>
+                    <p class="content text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste assumenda ab delectus accusantium, aliquid quo nulla, quibusdam illo ipsum explicabo omnis? Ipsam maxime laborum reprehenderit quo! Vitae, reprehenderit tenetur. Eligendi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <?php get_template_part('template-parts/main/features') ?>
 </main>
 
 <?php 

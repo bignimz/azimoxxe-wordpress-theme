@@ -23,5 +23,6 @@
     }
     ?>
     <header class="header-nav">
+        <!-- <?php get_template_part('template-parts/header/topbar'); ?> -->
         <?php get_template_part('template-parts/header/nav'); ?>
     </header>

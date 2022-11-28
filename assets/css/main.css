@@ -1,11 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
 a {
   text-decoration: none;
   color: #333;
 }
 
-.header-nav {
-  background-color: darkred;
+.color {
+  color: #ffc929;
+}
+
+.sub-title-color {
+  font-size: 25px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffc929;
+}
+
+p {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.azim-btn {
+  padding: 10px 30px;
+  background-color: #818181;
   color: #fff;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.azim-btn:hover {
+  background-color: #7d27d4;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Topbar */
+.topbar {
+  background-color: #f3f3f3;
+  color: #333;
+}
+
+.s-icon i {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.s-icon i:hover {
+  background-color: #ffd900;
+  color: #7d27d4;
+}
+
+/* Nav */
+.header-nav {
+  background-color: #7d27d4;
+  color: #fff;
+  z-index: 10;
 }
 
 .logo {
@@ -25,7 +88,15 @@ a {
 .nav-menu ul li a {
   color: white;
   text-decoration: none;
-  margin-right: 30px;
+  margin-right: 50px;
+}
+
+.nav-menu ul li a:last-child {
+  margin-right: 0;
+}
+
+.nav-menu ul li a:hover {
+  color: #ffd900;
 }
 
 .menu-item {
@@ -38,8 +109,50 @@ a {
 }
 
 .current-menu-item {
-  text-decoration: line-through;
+  /* text-decoration: line-through; */
+  /* font-weight: bold; */
 }
+
+.current-menu-item a {
+  color: #ffc929;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background-color: #7d27d4;
+  color: #fff;
+  position: relative;
+  top: 40px;
+  font-family: "Rubik", sans-serif;
+}
+
+.hero-title {
+  font-size: 129px;
+  font-weight: 500;
+}
+
+.hero p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32.4px;
+}
+
+/* .hero-img {
+  clip-path: polygon(
+    0 0,
+    79% 0,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+  background-image: url(../images/hero.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+} */
 
 article {
   min-height: 50vh;
@@ -62,12 +175,25 @@ article p {
 
 .hidden2 {
   opacity: 0;
-  filter: blur(5px);
+  filter: blur(2px);
   transform: translateX(-100%);
   transition: all 2s ease-in;
 }
 
 .show2 {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.hidden3 {
+  opacity: 0;
+  filter: blur(2px);
+  transform: translateX(100%);
+  transition: all 1.5s ease-in;
+}
+
+.show3 {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
@@ -87,15 +213,122 @@ article p {
 }
 
 .features-section {
-  background-color: #e6e6e6;
+  background-color: #ececec;
 }
 
 .features-section i {
-  font-size: 100px;
+  font-size: 50px;
+  background-color: #7d27d4;
+  color: #fff;
+  padding: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* Intro */
+.intro-section {
+  background-color: #f3f3f3;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #7d27d4;
+}
+
+.intro-title {
+  font-size: 40px;
+}
+
+.content {
+  color: #555;
+}
+
+.learn-more {
+  padding: 15px 30px;
+  background-color: #7d27d4;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.learn-more:hover {
+  background-color: #8b0000;
+  color: #fff;
+}
+
+/* Services */
+.services {
+  padding: 100px 0px;
+}
+
+.services .card:hover {
+  background-color: #7d27d4;
+  color: #fff;
+}
+
+.services .card:hover > .service-img {
+  background-color: #ffd900;
+  color: #333;
+}
+
+.service-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 12px;
+  background-color: #7d27d4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-img i {
+  font-size: 50px;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* Before Footer */
+.before_footer {
+  background-color: #ffc929;
+  position: relative;
+  top: 150px;
+  z-index: 10;
+  border-radius: 20px;
+}
+
+.b4-image img {
+  position: relative;
+  left: -12px;
+  border-radius: 20px;
+}
+
+.b4-contact {
+  padding: 40px 0px;
+}
+
+.b4-title {
+  font-size: 47px;
+  line-height: 54.6px;
 }
 
 .footer {
-  background-color: #000;
+  background-color: #7d27d4;
   color: #fff;
-  border-top: 10px solid darkred;
+  height: 50vh;
+  position: relative;
+}
+
+.copy {
+  position: absolute;
+  top: 50%;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .hero {
+    background-attachment: scroll;
+  }
 }
